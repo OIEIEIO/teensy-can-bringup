@@ -80,7 +80,7 @@ The local Cargo runner builds the HEX file and calls `teensy_loader_cli`.
 From the repo root:
 
 ```bash
-cd ~/teensy-rust-test/teensy-can-bringup
+cd ~/teensy-can-bringup
 
 cargo build \
   --release \
@@ -99,7 +99,7 @@ tools/target/x86_64-unknown-linux-gnu/release/can-dashboard
 This is the tested dashboard run command:
 
 ```bash
-cd ~/teensy-rust-test/teensy-can-bringup/tools/can-dashboard
+cd ~/teensy-can-bringup/tools/can-dashboard
 
 cat /dev/ttyACM0 | tee /tmp/can_raw2.log | ~/teensy-rust-test/teensy-can-bringup/tools/target/x86_64-unknown-linux-gnu/release/can-dashboard
 ```
