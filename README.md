@@ -56,7 +56,7 @@ rustup target add thumbv7em-none-eabihf
 From the repo root:
 
 ```bash
-cd ~/teensy-rust-test/teensy-can-bringup
+cd ~/teensy-can-bringup
 
 cargo build --release --target thumbv7em-none-eabihf
 ```
@@ -66,7 +66,7 @@ cargo build --release --target thumbv7em-none-eabihf
 From the repo root:
 
 ```bash
-cd ~/teensy-rust-test/teensy-can-bringup
+cd ~/teensy-can-bringup
 
 cargo run --release --target thumbv7em-none-eabihf
 ```
@@ -101,7 +101,7 @@ This is the tested dashboard run command:
 ```bash
 cd ~/teensy-can-bringup/tools/can-dashboard
 
-cat /dev/ttyACM0 | tee /tmp/can_raw2.log | ~/teensy-rust-test/teensy-can-bringup/tools/target/x86_64-unknown-linux-gnu/release/can-dashboard
+cat /dev/ttyACM0 | tee /tmp/can_raw2.log | ~/teensy-can-bringup/tools/target/x86_64-unknown-linux-gnu/release/can-dashboard
 ```
 
 This reads the Teensy serial stream, saves a raw log copy to `/tmp/can_raw2.log`, and pipes the same stream into the dashboard.
