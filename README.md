@@ -139,4 +139,5 @@ No active ../teensy4-rs project dependency
 
 ## License
 
-Not specified yet.
+This project is licensed under the MIT License.
+See [LICENSE](LICENSE) for details.
