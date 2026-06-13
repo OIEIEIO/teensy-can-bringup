@@ -1,0 +1,50 @@
+# File: Cargo.toml
+# Tree location: ~/teensy-rust-test/teensy-can-bringup/Cargo.toml
+# Version: v0.1.3-standalone-crates-bsp
+# Comments:
+# - Standalone Teensy 4.0 CAN bring-up project manifest.
+# - Rust edition 2021.
+# - Provides local rt feature used by build.rs.
+# - Provides imxrt-rt to build.rs.
+# - Uses rtic-monotonics v1 API expected by src/main.rs.
+# - Uses crates.io teensy4-bsp for standalone builds.
+# - Forces panic=abort for no_std builds.
+
+[package]
+name = "teensy-can-bringup"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[features]
+default = ["rt"]
+rt = ["teensy4-bsp/rt"]
+
+[dependencies]
+teensy4-bsp = { version = "0.5.2", default-features = false }
+teensy4-panic = "0.2"
+imxrt-log = "0.1"
+log = "0.4"
+
+rtic = { version = "2", features = ["thumbv7-backend"] }
+rtic-monotonics = { version = "1.5.0", features = ["cortex-m-systick"] }
+
+[build-dependencies]
+imxrt-rt = "0.1"
+
+[profile.release]
+debug = true
+lto = true
+codegen-units = 1
+opt-level = "z"
+panic = "abort"
+
+[profile.dev]
+debug = true
+opt-level = 1
+panic = "abort"
+
+# Footer:
+# File: Cargo.toml
+# Tree location: ~/teensy-rust-test/teensy-can-bringup/Cargo.toml
+# Version: v0.1.3-standalone-crates-bsp

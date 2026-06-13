@@ -1,0 +1,15 @@
+# Rust build output
+/target/
+/tools/target/
+/tools/can-dashboard/target/
+
+# Logs / temporary files
+*.log
+*.tmp
+*.bak
+*~
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store

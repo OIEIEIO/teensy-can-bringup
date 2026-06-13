@@ -1,0 +1,33 @@
+# ============================================================================
+# File: Cargo.toml
+# Path: ~/teensy-rust-test/teensy-can-bringup/tools/Cargo.toml
+# Version: v0.1.2-add-can-dashboard-member
+# Purpose:
+#   Host-side tools workspace manifest. Provides the teensy4-runner binary
+#   and the can-dashboard TUI crate as workspace members.
+# Created: 2026-06-10
+# Timestamp: 2026-06-10T17:35:00-04:00
+# ============================================================================
+
+[workspace]
+members = ["can-dashboard"]
+
+[package]
+name = "teensy-can-tools"
+version = "0.1.0"
+edition = "2024"
+publish = false
+
+[[bin]]
+name = "teensy4-runner"
+path = "runner.rs"
+
+# ============================================================================
+# Footer
+# File: Cargo.toml
+# Path: ~/teensy-rust-test/teensy-can-bringup/tools/Cargo.toml
+# Version: v0.1.2-add-can-dashboard-member
+# Created: 2026-06-10
+# Timestamp: 2026-06-10T17:35:00-04:00
+# End of file
+# ============================================================================

@@ -1,0 +1,30 @@
+# ============================================================================
+# File: Cargo.toml
+# Path: ~/teensy-rust-test/teensy-can-bringup/tools/can-dashboard/Cargo.toml
+# Version: v0.3.0-ratatui-dashboard
+# Purpose:
+#   Standalone Linux host crate for the Teensy CAN dashboard. Reads Teensy
+#   CAN log records from stdin, renders a ratatui TUI, and exits cleanly on
+#   q, Esc, or Ctrl-C without hanging the terminal.
+# Created: 2026-06-10
+# Timestamp: 2026-06-10T17:27:49-04:00
+# ============================================================================
+
+[package]
+name = "can-dashboard"
+version = "0.3.0"
+edition = "2024"
+
+[dependencies]
+ratatui = "0.29.0"
+crossterm = "0.28.1"
+
+# ============================================================================
+# Footer
+# File: Cargo.toml
+# Path: ~/teensy-rust-test/teensy-can-bringup/tools/can-dashboard/Cargo.toml
+# Version: v0.3.0-ratatui-dashboard
+# Created: 2026-06-10
+# Timestamp: 2026-06-10T17:27:49-04:00
+# End of file
+# ============================================================================

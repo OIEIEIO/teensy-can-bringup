@@ -1,0 +1,39 @@
+# ============================================================================
+# File: config.toml
+# Path: ~/teensy-rust-test/teensy-can-bringup/.cargo/config.toml
+# Version: v0.1.2-local-runner
+# Purpose:
+#   Build Teensy firmware for thumbv7em-none-eabihf.
+#   Build the local Teensy flashing runner for the Linux host target.
+# ============================================================================
+
+[build]
+target = "thumbv7em-none-eabihf"
+
+[target.thumbv7em-none-eabihf]
+rustflags = [
+    "-C", "link-arg=-Tt4link.x",
+    "-C", "link-arg=-Tdefmt.x",
+]
+
+runner = [
+    "cargo",
+    "run",
+    "--target",
+    "x86_64-unknown-linux-gnu",
+    "--manifest-path",
+    "tools/Cargo.toml",
+    "--bin",
+    "teensy4-runner",
+    "--",
+]
+
+[env]
+DEFMT_LOG = "info"
+
+# ============================================================================
+# Footer
+# File: config.toml
+# Path: ~/teensy-rust-test/teensy-can-bringup/.cargo/config.toml
+# Version: v0.1.2-local-runner
+# ============================================================================
